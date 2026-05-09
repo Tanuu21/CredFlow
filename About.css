@@ -1,0 +1,106 @@
+.about-hero {
+  text-align: center; padding: 40px 0 48px;
+}
+.about-logo {
+  display: inline-flex; margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+.about-hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 12px; }
+.about-tagline { font-size: 18px; color: var(--text2); margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.about-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+
+.about-section {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 24px; padding: 32px; margin-bottom: 40px;
+}
+.about-section-icon { font-size: 32px; margin-bottom: 12px; }
+.about-section h2 { font-size: 24px; font-weight: 800; margin-bottom: 16px; }
+.about-section p { color: var(--text2); line-height: 1.8; font-size: 15px; }
+
+.about-title {
+  font-size: 24px; font-weight: 800; margin-bottom: 20px;
+}
+
+/* Grant grid */
+.grant-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+.grant-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 24px; transition: all 0.3s;
+}
+.grant-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+.grant-icon { font-size: 28px; margin-bottom: 12px; }
+.grant-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.grant-card p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+
+/* Stats */
+.about-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 12px; margin-bottom: 40px;
+}
+.about-stat {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px; text-align: center;
+  transition: all 0.3s;
+}
+.about-stat:hover { border-color: var(--border2); transform: translateY(-2px); }
+.about-stat-val { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: var(--accent2); }
+.about-stat-label { font-size: 12px; color: var(--text3); margin-top: 4px; }
+
+/* Tech */
+.tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+.tech-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 16px 18px; transition: all 0.25s;
+}
+.tech-card:hover { border-color: var(--border2); }
+.tech-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.tech-role { font-size: 12px; color: var(--text3); }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+.team-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 24px; text-align: center; transition: all 0.3s;
+}
+.team-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+.team-avatar {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 18px; color: white; margin: 0 auto 14px;
+}
+.team-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--text3); }
+
+/* Roadmap */
+.roadmap { display: flex; flex-direction: column; gap: 0; margin-bottom: 40px; }
+.roadmap-phase {
+  display: flex; gap: 20px; padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.roadmap-phase:last-child { border-bottom: none; }
+.roadmap-dot {
+  width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+  background: var(--card2); border: 2px solid var(--border2); margin-top: 4px;
+}
+.roadmap-dot.done { background: var(--green); border-color: var(--green2); }
+.roadmap-q { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.roadmap-item { font-size: 13px; color: var(--text2); margin: 4px 0; }
+
+/* CTA */
+.about-cta {
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: 24px; padding: 40px; text-align: center; margin-bottom: 40px;
+  position: relative; overflow: hidden;
+}
+.about-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.08) 0%, transparent 60%);
+}
+.about-cta h2 { font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+.about-cta p { color: var(--text2); font-size: 15px; }
+
+@media (max-width: 700px) {
+  .grant-grid, .team-grid { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+}

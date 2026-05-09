@@ -1,0 +1,56 @@
+/* Summary */
+.invoice-summary {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 24px; display: flex;
+  align-items: center; gap: 24px; margin-bottom: 24px;
+}
+.inv-stat { flex: 1; }
+.inv-stat-divider { width: 1px; height: 60px; background: var(--border); }
+.inv-stat-val { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+.inv-stat-sub { font-size: 12px; color: var(--text3); }
+
+/* Invoice list */
+.inv-list { display: flex; flex-direction: column; gap: 14px; }
+.inv-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 20px; transition: all 0.3s;
+}
+.inv-card:hover { border-color: var(--border2); box-shadow: var(--shadow2); }
+.inv-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.inv-client-avatar {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 16px; color: white; flex-shrink: 0;
+}
+.inv-client { font-weight: 700; font-size: 15px; }
+.inv-id { font-size: 12px; color: var(--text3); font-family: monospace; }
+.inv-amount { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+.inv-dates { font-size: 12px; color: var(--text3); display: flex; gap: 8px; margin-bottom: 14px; }
+.inv-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Preview */
+.invoice-preview {
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: 20px; padding: 28px;
+}
+.inv-preview-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.inv-line-header {
+  display: flex; justify-content: space-between;
+  font-size: 11px; font-weight: 700; color: var(--text3);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0 0 8px; border-bottom: 1px solid var(--border);
+}
+.inv-line-item {
+  display: flex; justify-content: space-between;
+  padding: 14px 0; font-size: 14px;
+}
+.inv-total {
+  display: flex; justify-content: space-between;
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px;
+}
+.inv-pay-link {
+  margin-top: 20px; background: rgba(59,130,246,0.07);
+  border: 1px solid rgba(59,130,246,0.15); border-radius: 12px; padding: 14px;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}

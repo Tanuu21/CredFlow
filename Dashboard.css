@@ -1,0 +1,113 @@
+.dash-welcome {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.dash-name { font-size: 24px; font-weight: 800; margin-top: 4px; }
+
+/* Balance card */
+.balance-card {
+  background: linear-gradient(135deg, #1e3a6e 0%, #0f2042 60%, #0d1a38 100%);
+  border: 1px solid rgba(99,179,237,0.25);
+  border-radius: 24px; padding: 28px;
+  margin-bottom: 24px; position: relative; overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 60px rgba(59,130,246,0.1);
+}
+.balance-card-glow {
+  position: absolute; top: -30px; right: -30px;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.balance-amount {
+  font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800;
+  margin: 8px 0 4px;
+}
+.balance-inr { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 14px; }
+.balance-change { margin-bottom: 24px; }
+
+.balance-actions { display: flex; gap: 10px; }
+.balance-btn {
+  flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: 12px 8px; font-size: 13px; font-weight: 600;
+  color: white; cursor: pointer; transition: all 0.2s; display: flex;
+  flex-direction: column; align-items: center; gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+}
+.balance-btn span { font-size: 18px; }
+.balance-btn:hover { background: rgba(255,255,255,0.15); }
+.balance-btn:active { transform: scale(0.96); }
+
+/* Assets */
+.assets-list {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 8px 0; margin-bottom: 24px;
+}
+.asset-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px; transition: background 0.2s; border-radius: 12px;
+}
+.asset-row:hover { background: rgba(255,255,255,0.02); }
+.asset-info { flex: 0 0 60px; }
+.asset-name { font-weight: 700; font-size: 14px; }
+.asset-net { font-size: 11px; color: var(--text3); }
+.asset-bar-wrap { flex: 1; }
+.asset-vals { text-align: right; flex: 0 0 80px; }
+.asset-bal { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; }
+.asset-inr { font-size: 11px; color: var(--text3); }
+.asset-change { font-size: 13px; font-weight: 600; flex: 0 0 56px; text-align: right; }
+.asset-change.up { color: var(--green2); }
+.asset-change.dn { color: #f87171; }
+.asset-change.na { color: var(--text3); }
+
+/* Chart months */
+.chart-months {
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: var(--text3); margin-top: 8px;
+}
+
+/* Invoice rows */
+.invoice-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.invoice-row:last-child { border-bottom: none; }
+.invoice-avatar {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--card2); display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 15px; color: var(--accent2); flex-shrink: 0;
+}
+
+/* Transactions */
+.tx-list {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+}
+.tx-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.tx-row:last-child { border-bottom: none; }
+.tx-row:hover { background: rgba(255,255,255,0.02); }
+
+.tx-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700; flex-shrink: 0;
+}
+.tx-icon.received { background: rgba(16,185,129,0.15); color: var(--green2); }
+.tx-icon.sent { background: rgba(239,68,68,0.12); color: #f87171; }
+.tx-icon.converted { background: rgba(59,130,246,0.12); color: var(--accent2); }
+
+.tx-info { flex: 1; }
+.tx-from { font-weight: 600; font-size: 14px; }
+.tx-date { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+.tx-amount-wrap { text-align: right; }
+.tx-amount { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; }
+.tx-amount.pos { color: var(--green2); }
+.tx-amount.neg { color: #f87171; }
+.tx-amount.neu { color: var(--accent2); }
+.tx-coin-tag { font-size: 11px; color: var(--text3); margin-top: 3px; }
+
+.coin-circle { flex-shrink: 0; }

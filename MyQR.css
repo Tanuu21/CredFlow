@@ -1,0 +1,71 @@
+/* Profile */
+.qr-profile-card {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; padding: 18px; margin-bottom: 20px;
+}
+.qr-profile-avatar {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 16px; color: white; flex-shrink: 0;
+}
+.qr-profile-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; }
+.qr-profile-handle { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+/* Coin row */
+.qr-coin-row { display: flex; gap: 8px; margin-bottom: 20px; }
+.qr-coin-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px; border-radius: 11px; border: 1px solid var(--border);
+  background: var(--bg2); color: var(--text2); cursor: pointer;
+  font-weight: 600; font-size: 14px; transition: all 0.2s;
+  font-family: 'Syne', sans-serif;
+}
+.qr-coin-btn:hover { border-color: var(--border2); color: var(--text); }
+.qr-coin-btn.active { border-color: var(--accent); background: rgba(59,130,246,0.1); color: var(--accent2); }
+
+/* Main QR card */
+.qr-main-card {
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: 24px; padding: 24px;
+  margin-bottom: 20px; position: relative;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 40px rgba(59,130,246,0.08);
+}
+.qr-label-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.qr-container {
+  display: flex; justify-content: center; align-items: center;
+  position: relative; margin-bottom: 16px;
+}
+.qr-glow {
+  position: absolute; width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.qr-wrapper {
+  background: white; border-radius: 16px; padding: 12px;
+  position: relative; z-index: 1;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+.qr-logo-center {
+  position: absolute; width: 40px; height: 40px;
+  background: white; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.qr-network-hint {
+  text-align: center; font-size: 12px; color: var(--text3);
+}
+
+/* Share section */
+.qr-share-section {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 20px; margin-bottom: 20px;
+}
+.qr-share-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.qr-share-row:last-of-type { border-bottom: none; }
+.qr-share-btns { display: flex; gap: 8px; margin-top: 16px; }
